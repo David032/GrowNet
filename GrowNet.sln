@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowNetWebApp", "GrowNetWebApp\GrowNetWebApp.csproj", "{C4DA94D5-780F-476D-B3CB-C0729CFFF339}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrowNetWebApp", "GrowNetWebApp\GrowNetWebApp.csproj", "{C4DA94D5-780F-476D-B3CB-C0729CFFF339}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrowHAT", "GrowHAT\GrowHAT.csproj", "{247F56BC-B1D8-4F95-A141-ECF599AC3C51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{8380584D-E89C-4283-9045-A3EDB08FAB86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{C4DA94D5-780F-476D-B3CB-C0729CFFF339}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4DA94D5-780F-476D-B3CB-C0729CFFF339}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4DA94D5-780F-476D-B3CB-C0729CFFF339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{247F56BC-B1D8-4F95-A141-ECF599AC3C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{247F56BC-B1D8-4F95-A141-ECF599AC3C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{247F56BC-B1D8-4F95-A141-ECF599AC3C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{247F56BC-B1D8-4F95-A141-ECF599AC3C51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8380584D-E89C-4283-9045-A3EDB08FAB86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8380584D-E89C-4283-9045-A3EDB08FAB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8380584D-E89C-4283-9045-A3EDB08FAB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8380584D-E89C-4283-9045-A3EDB08FAB86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
