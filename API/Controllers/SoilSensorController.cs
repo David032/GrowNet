@@ -7,6 +7,9 @@ namespace API.Controllers
     [ApiController]
     public class SoilSensorController(ILogger<SoilSensorController> logger, IGrowHat Board) : ControllerBase
     {
+        ILogger<SoilSensorController> logger = logger;
+        IGrowHat Board = Board;
+
         [HttpGet("MoistureValue")]
         public double GetMoistureValue(SoilSensorPin soilSensor)
         {

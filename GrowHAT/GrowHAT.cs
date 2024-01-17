@@ -25,17 +25,17 @@ namespace Iot.Device.GrowHat
         /// <summary>
         /// Sensor labeled S1 on the HAT
         /// </summary>
-        public GrowHatSoilSensor? SoilSensor1 { get; private set; }
+        public GrowHatSoilSensor? SoilSensor1 { get; protected set; }
 
         /// <summary>
         /// Sensor labeled S2 on the HAT
         /// </summary>
-        public GrowHatSoilSensor? SoilSensor2 { get; private set; }
+        public GrowHatSoilSensor? SoilSensor2 { get; protected set; }
 
         /// <summary>
         /// Sensor labeled S3 on the HAT
         /// </summary>
-        public GrowHatSoilSensor? SoilSensor3 { get; private set; }
+        public GrowHatSoilSensor? SoilSensor3 { get; protected set; }
         #endregion
 
         #region LV Devices
