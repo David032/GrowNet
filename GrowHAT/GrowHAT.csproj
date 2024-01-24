@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Iot.Device.GrowHat</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="GrowHAT.cs" />
+    <Compile Include="GrowHatBuzzer.cs" />
+    <Compile Include="GrowHatLightSensor.cs" />
+    <Compile Include="GrowHatPump.cs" />
+    <Compile Include="GrowHatSoilSensor.cs" />
+    <Compile Include="IGrowHat.cs" />
+    <Compile Include="IGrowHatDevice.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Iot.Device.Bindings" Version="3.1.0" />
+    <PackageReference Include="System.Device.Gpio" Version="3.1.0" />
+  </ItemGroup>
+
+</Project>

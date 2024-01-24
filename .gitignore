@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+API/Build/
+
+GrowHAT/GrowHatSample/GrowHatSample/
+
+API/API-Dev/
