@@ -1,0 +1,486 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/Environment/GetTemperature": {
+            "get": {
+                "tags": [
+                    "BME280"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Environment/GetPressure": {
+            "get": {
+                "tags": [
+                    "BME280"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Environment/GetAltitude": {
+            "get": {
+                "tags": [
+                    "BME280"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Buzzer/PlayBuzzerTone": {
+            "post": {
+                "tags": [
+                    "Buzzer"
+                ],
+                "parameters": [
+                    {
+                        "name": "frequency",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "double"
+                        }
+                    },
+                    {
+                        "name": "seconds",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Buzzer/TurnBuzzerOn": {
+            "post": {
+                "tags": [
+                    "Buzzer"
+                ],
+                "parameters": [
+                    {
+                        "name": "frequency",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "double"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Buzzer/TurnBuzzerOff": {
+            "post": {
+                "tags": [
+                    "Buzzer"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/SoilSensor/MoistureValue": {
+            "get": {
+                "tags": [
+                    "SoilSensor"
+                ],
+                "parameters": [
+                    {
+                        "name": "soilSensor",
+                        "in": "query",
+                        "schema": {
+                            "$ref": "#/components/schemas/SoilSensorPin"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/SoilSensor/Active": {
+            "get": {
+                "tags": [
+                    "SoilSensor"
+                ],
+                "parameters": [
+                    {
+                        "name": "soilSensor",
+                        "in": "query",
+                        "schema": {
+                            "$ref": "#/components/schemas/SoilSensorPin"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/SoilSensor/NewData": {
+            "get": {
+                "tags": [
+                    "SoilSensor"
+                ],
+                "parameters": [
+                    {
+                        "name": "soilSensor",
+                        "in": "query",
+                        "schema": {
+                            "$ref": "#/components/schemas/SoilSensorPin"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/SoilSensor/Saturation": {
+            "get": {
+                "tags": [
+                    "SoilSensor"
+                ],
+                "parameters": [
+                    {
+                        "name": "soilSensor",
+                        "in": "query",
+                        "schema": {
+                            "$ref": "#/components/schemas/SoilSensorPin"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/SoilSensor/History": {
+            "get": {
+                "tags": [
+                    "SoilSensor"
+                ],
+                "parameters": [
+                    {
+                        "name": "soilSensor",
+                        "in": "query",
+                        "schema": {
+                            "$ref": "#/components/schemas/SoilSensorPin"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "number",
+                                        "format": "double"
+                                    }
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "number",
+                                        "format": "double"
+                                    }
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "number",
+                                        "format": "double"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/SoilSensor/WetPoint": {
+            "post": {
+                "tags": [
+                    "SoilSensor"
+                ],
+                "parameters": [
+                    {
+                        "name": "sensorPin",
+                        "in": "query",
+                        "schema": {
+                            "$ref": "#/components/schemas/SoilSensorPin"
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "double"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "SoilSensor"
+                ],
+                "parameters": [
+                    {
+                        "name": "sensorPin",
+                        "in": "query",
+                        "schema": {
+                            "$ref": "#/components/schemas/SoilSensorPin"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/SoilSensor/DryPoint": {
+            "post": {
+                "tags": [
+                    "SoilSensor"
+                ],
+                "parameters": [
+                    {
+                        "name": "sensorPin",
+                        "in": "query",
+                        "schema": {
+                            "$ref": "#/components/schemas/SoilSensorPin"
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "in": "query",
+                        "schema": {
+                            "type": "number",
+                            "format": "double"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "SoilSensor"
+                ],
+                "parameters": [
+                    {
+                        "name": "sensorPin",
+                        "in": "query",
+                        "schema": {
+                            "$ref": "#/components/schemas/SoilSensorPin"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "SoilSensorPin": {
+                "enum": [
+                    8,
+                    23,
+                    25
+                ],
+                "type": "integer",
+                "format": "int32"
+            }
+        }
+    }
+}
