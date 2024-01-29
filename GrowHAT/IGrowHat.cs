@@ -9,6 +9,7 @@ namespace Iot.Device.GrowHat
     {
         public List<GrowHatSoilSensor> GetSoilSensors();
         public GrowHatSoilSensor GetSoilSensor(SoilSensorPin Sensor);
+        public Buzzer.Buzzer GetBuzzer();
 
     }
 }

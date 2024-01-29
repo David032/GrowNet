@@ -175,5 +175,10 @@ namespace Iot.Device.GrowHat
                 _ => null,
             };
         }
+
+        public Buzzer.Buzzer GetBuzzer()
+        {
+            return HatBuzzer;
+        }
     }
 }
