@@ -13,7 +13,7 @@ namespace API.Controllers
         [HttpPost("PlayBuzzerTone")]
         public void PlayBuzzerTone(double frequency, int seconds)
         {
-            Board.GetBuzzer().PlayTone(frequency, seconds);
+            Board.GetBuzzer().PlayTone(frequency, (seconds * 1000));
         }
 
         [HttpPost("TurnBuzzerOn")]
